@@ -10,7 +10,7 @@ exports.getAll = async(req,res)=>{
         res.status(200).json({
             status: "success",
             data: {
-                kursevi,
+                akademii,
             },
         });
 
@@ -29,7 +29,7 @@ exports.getOne = async(req,res)=>{
         res.status(200).json({
             status: "success",
             data:{
-                announcement,
+                akademija,
             },
         });
 
@@ -48,7 +48,7 @@ exports.create = async(req,res)=>{
         res.status(201).json({
             status: "success",
             data: {
-                kurs: newAkademija,
+                akademija: newAkademija,
             },
         });
 
@@ -73,7 +73,7 @@ exports.update = async(req,res)=>{
         res.status(200).json({
             status: "success",
             data: {
-                kurs,
+                akademija,
             },
         });
 
