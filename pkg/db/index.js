@@ -1,4 +1,4 @@
-const monggose = require("mongoose");
+const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
 dotenv.config({path: `${__dirname}/../../config.env`});
@@ -10,12 +10,8 @@ const DB= process.env.DATABASE.replace(
 
 exports.init= async()=>{
     try{
-        await mongoose.connect(DB, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
+        await mongoose.connect(DB);
         console.log("Successfully connected to DataBase!");
-
     }catch(err){
         console.log(err);
     }
