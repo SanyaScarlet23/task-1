@@ -1,0 +1,101 @@
+Теорија
+
+Q1:Што е World Wide Web?
+A1:WWW e golema elektronska kniga koja e zbir od stranici (Web pages) koi se postaveni vo HTML i se vrzani so pristap preku HTTPS i sodrzhat sopstveni URL(Uniform Resource Locator).
+
+Q2:Какви пораки се испраќаат преку HTTP помеѓу клиентот и серверот?
+A2:HTTP t.e Hypertext Transfer protocol se koristi za komunikacija i prakjanje na dva vida na poraki i toa:
+  1. Request: od klient kon serverot.
+  2. Response: od serverot do klientot.
+
+Q3:Што е Node.js, а што Express.js?
+A3:  1.Node.js ne e programski jazik tuku toj e sozdadena okolina  koja se koristi za Javascript da mozhe da se pokrenuva i koristi bez upotreba na browser. Toj e izgraden vrz baza na JavaScript.
+     2.Express.js e framework (i e del) od Node.js koj pomaga za polesno postavuvanje/gradenje na servisite i rutite.
+
+Q4:Што е MVC архитектура и што е обврската на нејзините составни делови?
+A4:MVC arhitektura e dizajn za gradenje na aplikacija vo tri logichki dela: Model, View i Controller.
+   1.Model: Model komponentata korespondira so site podatoci od koi korisnikot ima potreba. Tie podatoci mozhat da se:
+   -Podatoci koi se pobarani pomegju Controller i View komponentite;
+   -Podatoci koi se naogjaat vo Database-ata; isto taka
+   -Odgovara (responds) na Controller komponentata i nejzinite pobaruvanja (requests) ova e bidejkji Controller komponentata ne mozhe da komunicira direktno so Database-ata
+   2.View: View komponentata se koristi za celokupnata UI (user interface) logika na aplikacijata, odnosno View go generira korisnichkiot interfejs.
+    View komponentata e kreirana od podatoci koi se sozdadeni od Model komponentata, no tie podatoci ne se zemaat direktno tuku preku Controller komponentata, so koja View e vo interakcija.
+   3.Controller: Ova komponenta e kako medijator pomegju View i Model komponentite. Controller-ot ne se grizhi za podatocite tuku baranja za koj vid na data stanuva zbor na Model komponentata.
+    Toj e kosturot na aplikacijata, nejzinata logika i pobaruvanjata (requests), gi manipulira podatocite preku Model komponentata i vrshi interakcija so View komp., za renderiranje na 
+    finalniot izgled.
+
+Q5:Што се рути?
+A5:Ruti: Prosleduvanje na podrzhanite pobaruvanja( requests t.e. site informacii kodirani vo URL-ovite pobaruvanja) koi odgovaraat na funkciite 
+vo Controller komponentata. 
+
+Q6:Што се модули? (бонус: какви типови на модули има?)
+A6:Modul e funkcija ili grupa na slichni funkcii grupirani zaedno vo ramka na fajl i sodrzhat kod za izvrshuvanje na odredena zadacha/cel koga kje se povikaat vo api-to.
+Se koristat/povikuvaat megjusebno so kluchnite zborovi export i import. Tipovi na moduli se:
+-CommonJS 
+-Asynchronous Module Definition (AMD) 
+-Universal Module Definition (UMD) 
+-ES Modules 
+
+Q7:Што е веб сервис? Дадете пример за еден веб сервис.
+A7:Web servisi se gradat vrz otvoreni standardi kako shto se TCP/IP, HTTP, Java, HTML i XML informaciski sistemi za razmena koi koristat internet za direktna interakcija 
+pomegju aplikaciite. Sistemite mozhat da vkluchat programi, objekti, poraki ili dokumenti.
+Najednostavna ili bazichna platforma na web services e XML zaedno so HTTP. Servisite gi sodrzhat slednive komponenti:
+-SOAP (Simple Object Access Protocol)
+-UDDI (Universal Description, Discovery and Integration)
+-WSDL (Web Services Description Language)
+Primer: REST API e web servis koj koristi HTTP koj dozvoluva interface za klentot da vrshi interakcija so servisot. Se dizajnirani ednostavno za lugjeto da delat podatoci i 
+funkcionalnosti pomegju aplikaciite. REST API dozvoluva interakcija so bilo koj server preku HTTP dodeka web API vrshi interakcija na web server preku HTTP requests.
+
+Q8:Објаснете што е и како функционира JWT автентикација?
+A8:JSON Web Token (JWT) avtentikacija e "stateless" bezbednosna metoda za razmena na informacii pomegju stranite (user-server) vo vid na JSON (JavaScript Object Notation), odnosno se koristi
+kako avtentikacija i avtorizacija na korisnici vo web aplikacii i APIs. Za avtentikacijata "staeless" znachi mehanizam vo koj serverot ne odrzhuva sesii pomoegju pobaruvanjata (requests).
+Sekoj request (pobaruvanje) e samostoen i gi sodrzhi vo sebe site potrebni informacii za avtorizacija na korisnikot. Vo JWT avtentikacijata potrebnite informacii se naogjaat vo tokenot.
+JSON Token se sostoi od tri dela:
+1.Header: koj sodrzhi informacii za tipot na tokenot i algoritmot koj se koristi da generira signature.
+2.Payload: sodrzhi vo sebe ID i verifikacija koi se od korisnikot i mozhat da bidat za ID:vo forma na Ueser ID, ime na korisnikot, email adresa, password itd., i
+ Verifikacija:glavna informacija za operiranje na tokenot.
+3.Signature: isto se srekjava pod imeto kriptiran mehanizam koj vsushnost go validaira tokenot.
+Site zaedno Header, Payload i Signature go gradat JSON Web Token-ot, koj e komunikacija pomegju klentot i serverot vo HTTP header avtorizacija ili drugiot nachin za komunikacija,
+tokenot koga se isprakja vo body od HTTP request ili obratnata nasoka koga e od serverot do user-ot a toa e HTTP response.
+
+Q9:Што е MongoDB? Објаснете накратко за каков софтвер станува збор?
+A9:MongoDB e open-source NoSQL Ne-relaciona-data baza. Se koristi za zachuvuvanje na podatoci vo dokumenti (JSON object) fajl, nivno upravuvanje i menuvanje.
+Documentite se zachuvani i povrzani so key-value-pairs i toa znachi deka podatokot e ednica so tie tri vrednosti za MongoDB. 
+MongoDB ovozmozhuva na korisnikot so serverot da kreira podatochna baza. Dokumentot nalikuva na JSON fajl no ima i alternativen koj se vika BSON (Binary JSON).
+Setot od dokumenti se vika kolekcija vo MongoDB i mozhe da ima povekje kolekcii vo edna data baza no istite tie kolekcii  ne mozhat da se dodeluvaat na druga baza, isto taka 
+razlichnite kolekcii vo edna data baza mozhat da imaat razlichen tip na podatoci.
+
+Q10:Што е разликата помеѓу MongoDB и Mongoose?
+A10:Mongoose e objektno-orentaciona JavaScript biblioteka koja e za povrzuvanje na data_bazata_MongoDB so Node_JS JavaScript okolinata.
+Mongoose ovozmozhu na programerite da definiraat tipovi na podatoci, modeli za podatochnite polinja, pravila za validizacija na podatocite i nivnite vrednosti shto sozdava
+konzistentnost i integritet na samite podatoci. Mongoose e eden vid na apstrakno nivo od MongoDB.
+
+Q11:Што е разликата помеѓу Synchronous (Сихрона) i Аsynchronous (Асинхрона) функција во Node.js
+A11:Sinhrona funkcija koga e vo blok od povekje (sinhroni) funkcii se izvrshuvaat edna po edna, redosledot na izvrshuvanje e kako se zapishani ne mozhe da se izvrshi edna sinhrona funkcija ako 
+predhodnata nad nea ne e zavrshena, mnogu se lesni za naogjanje na greshka bidejkji tochno se znae koja f-ja javuva greshka zatoa se vikaat i blok funkcii, za razlika od asinhrona funkcija koja pripagja vo 
+grupata na ne-blok funkcii i se mnogu po robusni vo smisla deka mozhat povekje funkcii da se izvrshuvaat vo istovremeno, isto taka asinhrona funkcija sekogash vrakja vrednost. Od druga strana pak se poteshki za 
+naogjanje na greshki. Ako imame dve sinhroni funkcii i edna asinhrona f-ja vo toj sluchaj edna sinhrona prvata koja e napishana vo kodot i asinhronata mozhat da se izvrshat istovremeno dodeka vtorata sinhrona 
+kje se izvrshi otkako kje zavrshi execute na prvata sinhrona f-ja.
+Node.js raboti na single-thread dodeka Script (JavaScript) e na multiple-threads ova e plus zoshto acinhronata funkcija mozhe da raboti vo del od kod kade ima povekje drugi funkcii odnosno ne mora da se sinhronizirani
+input/output-ovite. 
+
+Vtor Del:
+RESTful API плус имплементација на изглед:
+REST (Representational State Transfer) e softverska arhitektura koja ovozmozhuva i zadava uslovi kako treba edno API (Application Programming Interface) da raboti.
+
+-Да се креира нова дата база со име exams
+-Да се креира колекција за академија и курс
+-Линкот до дата базата и лозинката да се впишани во config.env(ili vo .json)
+-За секоја академија се чуваат неговото име и адреса
+-За секој курс се чуваат неговото име, адреса и за која област е наменет
+-CRUD систем за додавање на Курсеви во база
+-CRUD систем за додавање на Академија во база
+-Да се отворат сите рути за менаџирање на ресурсот Курс
+-Да се имплементира рута со име “test” во неа со помош на ejs да се прикаже so h1 tag “Тест за backend развој на софтвер”
+
+Bonus:
+Да се имплементира изглед со рута “welcome” каде што ќе се прикажани во ejs сите курсеви
+Да се имплементира JWT автентикација
+Само логиран корисник може да додава, брише или менаџира курс
+Нелогирани корисници можат да ги прегледуваат сите курсеви
+Курсот е дел од една академија, во која има повеќе курсеви
